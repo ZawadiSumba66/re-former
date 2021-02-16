@@ -1,0 +1,62 @@
+<h1>New Form</h1>
+
+<%= error_messages_for(@user) %>
+
+<!--<form accept-charset="UTF-8" action="<%#= users_url %>" method="post">-->
+
+<!--  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">-->
+
+<!--  <h3>Form 1</h3>-->
+
+<!--  <label for="username">Username:</label>-->
+<!--  <input id="username" type="text" name="user[username]">-->
+
+<!--  <label for=" email">Email:</label>-->
+<!--  <input id="email" type="email" name="user[email]">-->
+
+<!--  <label for="password">Password:</label>-->
+<!--  <input id="password" type="password" name="user[password]">-->
+
+<!--  <input type="submit" value="Sign Up">-->
+
+<!--</form>-->
+
+<!--<br/>-->
+<!--<br/>-->
+
+<%#= form_tag(users_url) do %>
+
+<!--  <h3>Form 2</h3>-->
+
+  <%#= label_tag :username %>
+  <%#= text_field_tag :username %>
+
+  <%#= label_tag :email %>
+  <%#= email_field_tag :email %>
+
+  <%#= label_tag :password %>
+  <%#= password_field_tag :password %>
+
+  <%#= submit_tag "Sign In" %>
+<%# end %>
+
+<!--<br/>-->
+<!--<br/>-->
+
+<%= form_with model: @user do |form| %>
+  <h3>Form 3</h3>
+
+  <%= form.label :username %>
+  <%= form.text_field :username, placeholder: "Your username here" %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email, placeholder: "example@example.com" %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.submit %>
+
+
+<% end %>
+
