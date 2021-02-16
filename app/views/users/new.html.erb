@@ -1,45 +1,47 @@
-<h1>New</h1>
+<h1>New Form</h1>
 
-<form accept-charset="UTF-8" action="<%= users_url %>" method="post">
+<%= error_messages_for(@user) %>
 
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<!--<form accept-charset="UTF-8" action="<%#= users_url %>" method="post">-->
 
-  <h3>Form 1</h3>
+<!--  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">-->
 
-  <label for="username">Username:</label>
-  <input id="username" type="text" name="user[username]">
+<!--  <h3>Form 1</h3>-->
 
-  <label for=" email">Email:</label>
-  <input id="email" type="email" name="user[email]">
+<!--  <label for="username">Username:</label>-->
+<!--  <input id="username" type="text" name="user[username]">-->
 
-  <label for="password">Password:</label>
-  <input id="password" type="password" name="user[password]">
+<!--  <label for=" email">Email:</label>-->
+<!--  <input id="email" type="email" name="user[email]">-->
 
-  <input type="submit" value="Sign Up">
+<!--  <label for="password">Password:</label>-->
+<!--  <input id="password" type="password" name="user[password]">-->
 
-</form>
+<!--  <input type="submit" value="Sign Up">-->
 
-<br/>
-<br/>
+<!--</form>-->
 
-<%= form_tag(users_url) do %>
+<!--<br/>-->
+<!--<br/>-->
 
-  <h3>Form 2</h3>
+<%#= form_tag(users_url) do %>
 
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+<!--  <h3>Form 2</h3>-->
 
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
+  <%#= label_tag :username %>
+  <%#= text_field_tag :username %>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%#= label_tag :email %>
+  <%#= email_field_tag :email %>
 
-  <%= submit_tag "Sign In" %>
-<% end %>
+  <%#= label_tag :password %>
+  <%#= password_field_tag :password %>
 
-<br/>
-<br/>
+  <%#= submit_tag "Sign In" %>
+<%# end %>
+
+<!--<br/>-->
+<!--<br/>-->
 
 <%= form_with model: @user do |form| %>
   <h3>Form 3</h3>
