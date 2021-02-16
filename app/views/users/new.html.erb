@@ -19,6 +19,9 @@
 
 </form>
 
+<br/>
+<br/>
+
 <%= form_tag(users_url) do %>
 
   <h3>Form 2</h3>
@@ -34,3 +37,24 @@
 
   <%= submit_tag "Sign In" %>
 <% end %>
+
+<br/>
+<br/>
+
+<%= form_with model: @user do |form| %>
+  <h3>Form 3</h3>
+
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.submit %>
+
+
+<% end %>
+
